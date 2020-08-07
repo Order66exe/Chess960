@@ -62,15 +62,19 @@ namespace Chess
             ToolStripMenuItem button = (ToolStripMenuItem)sender;
             if (button.Text.StartsWith("New AI vs AI"))
             {
-                NewGame(0);
+                NewGame(0, false);
             }
             else if (button.Text.StartsWith("New AI vs Player"))
             {
-                NewGame(1);
+                NewGame(1, false);
             }
             else if (button.Text.StartsWith("New Player"))
             {
-                NewGame(2);
+                NewGame(2, false);
+            }
+            else if (button.Text.StartsWith("NineSixty"))
+            {
+                NewGame(2, true);
             }
         }
 

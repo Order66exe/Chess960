@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Chess
@@ -13,6 +15,7 @@ namespace Chess
         public Dictionary<Player, position_t> Kings { get; private set; }
         public Dictionary<Player, List<position_t>> Pieces { get; private set; }
         public Dictionary<Player, position_t> LastMove { get; private set; }
+        public List<int> takenPositions = new List<int>();
 
         public ChessBoard()
         {
@@ -70,6 +73,78 @@ namespace Chess
             Kings = new Dictionary<Player, position_t>();
             Kings[Player.BLACK] = new position_t(copy.Kings[Player.BLACK]);
             Kings[Player.WHITE] = new position_t(copy.Kings[Player.WHITE]);
+        }
+        public void NineSixty()
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                SetPiece(Piece.PAWN, Player.WHITE, i, 1);
+                SetPiece(Piece.PAWN, Player.BLACK, i, 6);
+            }
+
+            int kingPos = getPosition(1, 6, "");
+            SetPiece(Piece.KING, Player.WHITE, kingPos, 0);
+            SetPiece(Piece.KING, Player.BLACK, kingPos, 7);
+            Kings[Player.WHITE] = new position_t(kingPos, 0);
+            Kings[Player.BLACK] = new position_t(kingPos, 7);
+
+            int firstRookPos = getPosition(0, kingPos, "");
+            int secondRookPos = getPosition(kingPos, 8, "");
+            SetPiece(Piece.ROOK, Player.WHITE, firstRookPos, 0);
+            SetPiece(Piece.ROOK, Player.WHITE, secondRookPos, 0);
+            SetPiece(Piece.ROOK, Player.BLACK, firstRookPos, 7);
+            SetPiece(Piece.ROOK, Player.BLACK, secondRookPos, 7);
+
+            int firstBishopPos = getPosition(0, 8, "odds");
+            int secondBishopPos = getPosition(0, 8, "evens");
+            SetPiece(Piece.BISHOP, Player.WHITE, firstBishopPos, 0);
+            SetPiece(Piece.BISHOP, Player.WHITE, secondBishopPos, 0);
+            SetPiece(Piece.BISHOP, Player.BLACK, firstBishopPos, 7);
+            SetPiece(Piece.BISHOP, Player.BLACK, secondBishopPos, 7);
+            
+            int firstKnightPos = getPosition(0, 8, "");
+            int secondKnightPos = getPosition(0, 8, "");
+            SetPiece(Piece.KNIGHT, Player.WHITE, firstKnightPos, 0);
+            SetPiece(Piece.KNIGHT, Player.WHITE, secondKnightPos, 0);
+            SetPiece(Piece.KNIGHT, Player.BLACK, firstKnightPos, 7);
+            SetPiece(Piece.KNIGHT, Player.BLACK, secondKnightPos, 7);
+
+            int queenPos = getPosition(0, 8, "");
+            SetPiece(Piece.QUEEN, Player.WHITE, queenPos, 0);
+            SetPiece(Piece.QUEEN, Player.BLACK, queenPos, 7);
+        }
+        public int getPosition(int min, int max, string evensOrOdds)
+        {
+            bool done = false;
+            int result = 0;
+            Random rand = new Random();
+            while (!done)
+            {
+                result = rand.Next(min, max);
+                if (!takenPositions.Contains(result))
+                {
+                    if(evensOrOdds == "evens")
+                    {
+                        if((result % 2) == 0)
+                        {
+                            done = true;
+                        }
+                    }
+                    else if(evensOrOdds == "odds")
+                    {
+                        if((result % 2) > 0)
+                        {
+                            done = true;
+                        }
+                    }
+                    else
+                    {
+                        done = true;
+                    }
+                }
+            }
+            takenPositions.Add(result);
+            return result;
         }
 
         /// <summary>

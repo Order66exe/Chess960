@@ -15,7 +15,7 @@ namespace Chess
         private UIBoard m_UI;
         private int m_nPlayers;
 
-        public Chess(UIBoard ui, int nPlayers = 1, bool setupBoard = true)
+        public Chess(UIBoard ui, int nPlayers = 1, bool setupBoard = true, bool nineSixty = false)
         {
             // callback setup
             this.m_UI = ui;
@@ -31,7 +31,14 @@ namespace Chess
             this.Board = new ChessBoard();
             if (setupBoard)
             {
-                this.Board.SetInitialPlacement();
+                if(nineSixty)
+                {
+                    this.Board.NineSixty();
+                }
+                else
+                {
+                    this.Board.SetInitialPlacement();
+                }
             }
 
             // update ui

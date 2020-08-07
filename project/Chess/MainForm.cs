@@ -66,14 +66,14 @@ namespace Chess
         /// <summary>
         /// Set up a new game for the specified number of players.
         /// </summary>
-        private void NewGame(int nPlayers)
+        private void NewGame(int nPlayers, bool nineSixty)
         {
             // clean up all of the things first
             if (!m_manualBoard) Stop();
 
             // create new game for number of players
             m_aigame = (nPlayers == 0);
-            chess = new Chess(this, nPlayers, !m_manualBoard);
+            chess = new Chess(this, nPlayers, !m_manualBoard, nineSixty);
 
             // show turn status
             SetTurn(Player.WHITE);

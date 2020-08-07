@@ -1,0 +1,17 @@
+C:\Users\Zane\Documents\GitHub\chess\bin\debug\Chess.exe
+C:\Users\Zane\Documents\GitHub\chess\bin\debug\Chess.pdb
+C:\Users\Zane\Documents\GitHub\chess\project\Chess\obj\x86\Debug\Chess.csprojAssemblyReference.cache
+C:\Users\Zane\Documents\GitHub\chess\project\Chess\obj\x86\Debug\Chess.MainForm.resources
+C:\Users\Zane\Documents\GitHub\chess\project\Chess\obj\x86\Debug\Chess.Properties.Resources.resources
+C:\Users\Zane\Documents\GitHub\chess\project\Chess\obj\x86\Debug\Chess.csproj.GenerateResource.cache
+C:\Users\Zane\Documents\GitHub\chess\project\Chess\obj\x86\Debug\Chess.csproj.CoreCompileInputs.cache
+C:\Users\Zane\Documents\GitHub\chess\project\Chess\obj\x86\Debug\Chess.exe
+C:\Users\Zane\Documents\GitHub\chess\project\Chess\obj\x86\Debug\Chess.pdb
+C:\Users\Zane\Documents\GitHub\chess1\bin\debug\Chess.exe
+C:\Users\Zane\Documents\GitHub\chess1\bin\debug\Chess.pdb
+C:\Users\Zane\Documents\GitHub\chess1\project\Chess\obj\x86\Debug\Chess.MainForm.resources
+C:\Users\Zane\Documents\GitHub\chess1\project\Chess\obj\x86\Debug\Chess.Properties.Resources.resources
+C:\Users\Zane\Documents\GitHub\chess1\project\Chess\obj\x86\Debug\Chess.csproj.GenerateResource.cache
+C:\Users\Zane\Documents\GitHub\chess1\project\Chess\obj\x86\Debug\Chess.csproj.CoreCompileInputs.cache
+C:\Users\Zane\Documents\GitHub\chess1\project\Chess\obj\x86\Debug\Chess.exe
+C:\Users\Zane\Documents\GitHub\chess1\project\Chess\obj\x86\Debug\Chess.pdb
