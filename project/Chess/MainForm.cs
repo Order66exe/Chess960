@@ -19,7 +19,7 @@ namespace Chess
         Player m_manualPlayer = Player.WHITE;
         Piece m_manualPiece = Piece.PAWN;
 
-        Chess chess;
+        public Chess chess;
                 
         /// <summary>
         /// Stop all current activity / games and reset everything.

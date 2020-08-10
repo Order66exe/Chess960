@@ -93,7 +93,7 @@
             this.difficultyDepthToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(845, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(845, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -135,13 +135,6 @@
             this.new2PlayerGameToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.new2PlayerGameToolStripMenuItem.Text = "New Player vs Player Game";
             this.new2PlayerGameToolStripMenuItem.Click += new System.EventHandler(this.NewGame);
-            //
-            // nineSixtyGame
-            //
-            this.nineSixtyToolStripMenuItem.Name = "nineSixtyToolStripMenuItem";
-            this.nineSixtyToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
-            this.nineSixtyToolStripMenuItem.Text = "Nine Sixty";
-            this.nineSixtyToolStripMenuItem.Click += new System.EventHandler(this.NewGame);
             // 
             // endCurrentGameToolStripMenuItem
             // 
@@ -308,6 +301,7 @@
             this.nineSixtyToolStripMenuItem.Name = "nineSixtyToolStripMenuItem";
             this.nineSixtyToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.nineSixtyToolStripMenuItem.Text = "NineSixty";
+            this.nineSixtyToolStripMenuItem.Click += new System.EventHandler(this.NewGame);
             // 
             // difficultyDepthToolStripMenuItem
             // 
@@ -392,7 +386,7 @@
             this.splitView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitView.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitView.IsSplitterFixed = true;
-            this.splitView.Location = new System.Drawing.Point(0, 28);
+            this.splitView.Location = new System.Drawing.Point(0, 30);
             this.splitView.Margin = new System.Windows.Forms.Padding(4);
             this.splitView.Name = "splitView";
             // 
@@ -415,8 +409,8 @@
             this.splitView.Panel2.Controls.Add(this.label1);
             this.splitView.Panel2.Controls.Add(this.label2);
             this.splitView.Panel2MinSize = 200;
-            this.splitView.Size = new System.Drawing.Size(845, 515);
-            this.splitView.SplitterDistance = 623;
+            this.splitView.Size = new System.Drawing.Size(845, 513);
+            this.splitView.SplitterDistance = 622;
             this.splitView.SplitterWidth = 5;
             this.splitView.TabIndex = 2;
             // 
